@@ -5,11 +5,11 @@ import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
-    <section className="relative h-screen overflow-hidden pt-24">
+    <section className="relative min-h-screen overflow-hidden pt-24 pb-16 flex items-center justify-center">
       {/* Background Image */}
       <motion.div
         initial={{ scale: 1.25 }}
-        animate={{scale: [1.25, 1.18, 1.12, 1.08, 1.04, 1],}}
+        animate={{ scale: [1.25, 1.18, 1.12, 1.08, 1.04, 1] }}
         transition={{
           duration: 17,
           ease: "linear",
@@ -39,7 +39,7 @@ export default function Hero() {
       />
 
       {/* Hero Content */}
-      <div className="relative z-10 flex h-full items-center justify-center px-6 pt-32">
+      <div className="relative z-15 w-full max-w-5xl mx-auto px-6 text-center mt-6">
         <div className="mx-auto max-w-4xl px-6 text-center">
           {/* Badge */}
           <motion.span
@@ -74,7 +74,7 @@ export default function Hero() {
               delay: 0.3,
               duration: 0.8,
             }}
-            className="mt-8 text-5xl font-black leading-tight text-white md:text-7xl"
+            className="mt-6 text-4xl font-black leading-tight text-white sm:text-5xl md:text-7xl"
           >
             Membangun
             <br />
@@ -97,7 +97,7 @@ export default function Hero() {
               delay: 0.45,
               duration: 0.8,
             }}
-            className="mx-auto mt-8 max-w-3xl text-lg leading-9 text-emerald-100 md:text-xl"
+            className="mx-auto mt-6 max-w-3xl text-base leading-relaxed text-emerald-100 md:text-xl md:leading-9"
           >
             Forum Kajian Islam Rabbani merupakan Unit Kegiatan Mahasiswa
             Universitas Andalas yang berfokus pada dakwah, kaderisasi,
@@ -119,7 +119,7 @@ export default function Hero() {
               delay: 0.65,
               duration: 0.7,
             }}
-            className="mt-12 flex flex-wrap justify-center gap-5"
+            className="mt-8 md:mt-10 flex flex-wrap justify-center gap-4 md:gap-5"
           >
             <motion.button
               whileHover={{
@@ -146,29 +146,6 @@ export default function Hero() {
             >
               Tentang Kami
             </motion.button>
-          </motion.div>
-
-          {/* Scroll Indicator */}
-          <motion.div
-            initial={{
-              opacity: 0,
-            }}
-            animate={{
-              opacity: 1,
-            }}
-            transition={{
-              delay: 1,
-              duration: 0.8,
-            }}
-            className="mt-20 flex flex-col items-center"
-          >
-            <span className="text-sm tracking-[0.25em] text-emerald-100">
-              SCROLL
-            </span>
-
-            <div className="mt-4 flex h-14 w-8 justify-center rounded-full border border-white/30">
-              <div className="mt-2 h-3 w-3 animate-bounce rounded-full bg-white" />
-            </div>
           </motion.div>
         </div>
       </div>
