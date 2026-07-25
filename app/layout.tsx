@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 
 // Konfigurasi Viewport (Theme Color & Tampilan Mobile)
@@ -93,6 +94,7 @@ export default function RootLayout({
     <html lang="id">
       <body className="bg-[#021d17] text-white antialiased">
         {children}
+        <SpeedInsights />
       </body>
     </html>
   );
