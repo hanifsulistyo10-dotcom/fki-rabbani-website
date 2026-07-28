@@ -171,7 +171,7 @@ export default function Footer() {
                     href="#program"
                     className="transition hover:text-emerald-400 hover:underline"
                   >
-                    Program Kerja
+                    Program Unggulan
                   </a>
                 </li>
                 <li>

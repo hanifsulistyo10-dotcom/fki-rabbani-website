@@ -173,7 +173,7 @@ export default function AboutPage() {
           Tentang <span className="bg-clip-text text-transparent bg-gradient-to-r from-emerald-800 via-emerald-600 to-teal-600">FKI Rabbani</span>
         </h1>
         <p className="mt-3 text-slate-600 text-xs md:text-sm max-w-xl mx-auto leading-relaxed">
-          Mengenal lebih dekat identitas, sejarah, prinsip, dan penggerak dakwah kampus Universitas Andalas.
+          Mengenal lebih dekat identitas, sejarah, prinsip, dan penggerak dakwah kampus&nbsp;Universitas&nbsp;Andalas.
         </p>
       </section>
 
@@ -329,7 +329,7 @@ export default function AboutPage() {
             <Award size={13} className="text-emerald-600" />
             Struktur Kepengurusan
           </div>
-          <h2 className="text-2xl md:text-3xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-emerald-950 via-emerald-800 to-teal-900">
+          <h2 className="text-2xl md:text-3xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-emerald-950 via-emerald-800 to-teal-900 pb-1 leading-normal">
             Jajaran Penggerak Rabbani
           </h2>
           <p className="text-slate-600 text-xs md:text-sm max-w-xl mx-auto">

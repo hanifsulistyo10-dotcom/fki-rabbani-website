@@ -56,7 +56,7 @@ const stats = [
   },
   {
     icon: CalendarDays,
-    value: "60",
+    value: "6",
     suffix: "+",
     title: "Program",
     subtitle: "Tahunan",

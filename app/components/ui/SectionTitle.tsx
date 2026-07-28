@@ -33,7 +33,7 @@ export default function SectionTitle({
 
       </h2>
 
-      <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-slate-600">
+      <p className="mx-auto mt-6 max-w-4xl text-lg leading-8 text-slate-600">
 
         {description}
 

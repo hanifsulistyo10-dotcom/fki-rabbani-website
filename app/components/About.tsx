@@ -1,36 +1,7 @@
 import Image from "next/image";
-import {
-  BookOpen,
-  Users,
-  Handshake,
-  Sparkles,
-  CheckCircle2,
-} from "lucide-react";
+import { CheckCircle2 } from "lucide-react";
 import Container from "./ui/Container";
 import SectionTitle from "./ui/SectionTitle";
-
-const highlights = [
-  {
-    icon: BookOpen,
-    title: "Dakwah",
-    desc: "Menyebarkan nilai-nilai Islam melalui pembinaan dan kajian.",
-  },
-  {
-    icon: Users,
-    title: "Kaderisasi",
-    desc: "Mencetak mahasiswa muslim yang aktif dan berintegritas.",
-  },
-  {
-    icon: Handshake,
-    title: "Kolaborasi",
-    desc: "Membangun sinergi bersama FSI dan berbagai lembaga kampus.",
-  },
-  {
-    icon: Sparkles,
-    title: "Pengembangan",
-    desc: "Mengembangkan karakter, kepemimpinan, dan soft skill kader.",
-  },
-];
 
 export default function About() {
   return (
@@ -111,30 +82,6 @@ export default function About() {
                 ))}
               </div>
             </div>
-          </div>
-
-          {/* HIGHLIGHT */}
-          <div className="mt-24 grid gap-8 md:grid-cols-2 xl:grid-cols-4">
-            {highlights.map((item) => {
-              const Icon = item.icon;
-
-              return (
-                <div
-                  key={item.title}
-                  className="group rounded-[28px] border border-emerald-100/70 bg-white/80 p-8 shadow-sm backdrop-blur-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
-                >
-                  <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-white to-emerald-50 shadow-md transition group-hover:scale-110">
-                    <Icon size={30} className="text-emerald-700" />
-                  </div>
-
-                  <h3 className="text-xl font-bold text-[#032b22]">
-                    {item.title}
-                  </h3>
-
-                  <p className="mt-3 leading-7 text-gray-600">{item.desc}</p>
-                </div>
-              );
-            })}
           </div>
         </div>
       </Container>

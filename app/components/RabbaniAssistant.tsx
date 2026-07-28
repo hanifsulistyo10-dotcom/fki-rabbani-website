@@ -11,7 +11,7 @@ import {
   HelpCircle,
   MessageCircle,
   X,
-  Sparkles,
+  BotIcon,
   ChevronRight,
 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -21,37 +21,37 @@ const menus = [
     title: "Agenda",
     desc: "Jadwal kajian & event terdekat",
     icon: CalendarDays,
-    href: "#agenda",
+    href: "/agenda",
   },
   {
     title: "Pengumuman",
     desc: "Info penting & pendaftaran kader",
     icon: Bell,
-    href: "#pengumuman",
+    href: "/pengumuman",
   },
   {
     title: "Ayat / Hadits",
     desc: "Inspirasi islami harian",
     icon: BookOpen,
-    href: "#daily",
+    href: "/ayat-hadits",
   },
   {
     title: "Media Sosial",
     desc: "Instagram, YouTube & kanal resmi",
     icon: Globe,
-    href: "#media",
+    href: "/media-sosial",
   },
   {
     title: "Kolaborasi",
-    desc: "Sinergi dengan FSI & lembaga",
+    desc: "Jaringan dan aliansi kebaikan",
     icon: Users,
-    href: "#kolaborasi",
+    href: "/kolaborasi",
   },
   {
-    title: "FAQ",
+    title: "Kritik, Saran, dan Pertanyaan",
     desc: "Pertanyaan seputar FKI Rabbani",
     icon: HelpCircle,
-    href: "#faq",
+    href: "/feedback",
   },
 ];
 
@@ -103,7 +103,7 @@ export default function RabbaniAssistant() {
                 <div className="flex items-center gap-2.5">
                   {/* Icon Logo Elegan (Tanpa Simbol Kotak Kaku & Love) */}
                   <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-emerald-400 to-teal-600 text-[#022019] shadow-md shadow-emerald-950/30">
-                    <Sparkles size={16} className="text-[#022019]" />
+                    <BotIcon size={16} className="text-[#022019]" />
                   </div>
                   <div>
                     <div className="flex items-center gap-1.5">

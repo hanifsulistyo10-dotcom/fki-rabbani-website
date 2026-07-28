@@ -2,38 +2,44 @@
 
 import Container from "./ui/Container";
 import SectionTitle from "./ui/SectionTitle";
-import Card from "./ui/Card";
-import { Compass, Target, Sparkles, HeartHandshake } from "lucide-react";
+import { Globe, GraduationCap, Users, Sparkles, Building2 } from "lucide-react";
 
 export default function VisionMission() {
   const misiList = [
     {
       number: "01",
-      icon: <Compass className="h-6 w-6 text-emerald-700" />,
-      title: "Pembinaan & Kaderisasi",
+      icon: <Globe className="h-6 w-6 text-emerald-700" />,
+      title: "Poros Gerakan Kebaikan Kampus",
       description:
-        "Menyelenggarakan pembinaan dakwah dan kaderisasi mahasiswa muslim Universitas Andalas secara inklusif dan berkelanjutan.",
+        "Menjadikan FKI Rabbani sebagai pusat penggerak, pengarah, dan penguat berbagai inisiatif kebaikan di kampus yang mampu menciptakan sinergi gerakan yang berdampak luas dan berkelanjutan.",
     },
     {
       number: "02",
-      icon: <Target className="h-6 w-6 text-emerald-700" />,
-      title: "Pengembangan Potensi",
+      icon: <GraduationCap className="h-6 w-6 text-emerald-700" />,
+      title: "Melahirkan Kader Unggul",
       description:
-        "Mengembangkan potensi kepemimpinan, keilmuan, dan karakter Rabbani pada setiap anggota.",
+        "Mewujudkan kader Rabbani yang unggul secara kepribadian, intelektual, dan organisasi, serta mampu menjadi teladan dan berkontribusi aktif di lingkungan kampus.",
     },
     {
       number: "03",
-      icon: <Sparkles className="h-6 w-6 text-emerald-700" />,
-      title: "Syiar Islam Creative",
+      icon: <Users className="h-6 w-6 text-emerald-700" />,
+      title: "Membuka Ruang Kolaborasi yang Luas",
       description:
-        "Membangun syiar Islam yang kreatif, edukatif, dan berdampak positif bagi lingkungan kampus maupun masyarakat.",
+        "Membangun kolaborasi strategis dengan berbagai lembaga, komunitas, dan civitas kampus untuk memperluas jangkauan manfaat dan memperkuat dampak gerakan.",
     },
     {
       number: "04",
-      icon: <HeartHandshake className="h-6 w-6 text-emerald-700" />,
-      title: "Sinergi & Kolaborasi",
+      icon: <Sparkles className="h-6 w-6 text-emerald-700" />,
+      title: "Menghadirkan Syiar yang Kreatif",
       description:
-        "Menjalin kolaborasi dan sinergi strategis dengan lembaga dakwah, elemen kampus, serta alumni.",
+        "Menghadirkan syiar yang kreatif, adaptif, dan sesuai dengan karakter mahasiswa sehingga mampu menarik partisipasi dan mudah dipahami.",
+    },
+    {
+      number: "05",
+      icon: <Building2 className="h-6 w-6 text-emerald-700" />,
+      title: "Memperkuat Peradaban Kebaikan di Unand",
+      description:
+        "Mendorong terbentuknya budaya kampus yang berlandaskan nilai kebaikan, kepedulian, dan tanggung jawab sebagai fondasi peradaban yang berkelanjutan.",
     },
   ];
 
@@ -58,18 +64,18 @@ export default function VisionMission() {
             <span className="inline-block rounded-full bg-emerald-100 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-emerald-800 border border-emerald-200 mb-6">
               Visi Utama
             </span>
-            <h3 className="text-xl sm:text-2xl md:text-3xl font-extrabold text-[#032b22] leading-relaxed max-w-4xl mx-auto italic">
-              &ldquo;Menjadi wadah pembinaan dan gerakan dakwah kampus terdepan yang mewujudkan generasi Rabbani, berilmu, berakhlaqul karimah, serta berkontribusi nyata bagi bangsa dan umat.&rdquo;
+            <h3 className="text-xl sm:text-2xl md:text-3xl font-extrabold text-[#032b22] leading-relaxed max-w-5xl mx-auto italic">
+              &ldquo;Menjadikan FKI Rabbani sebagai poros gerakan kebaikan kampus yang melahirkan kader unggul, membuka ruang kolaborasi yang luas, dan menghadirkan syiar yang kreatif untuk memperkuat peradaban kebaikan Universitas&nbsp;Andalas.&rdquo;
             </h3>
           </div>
         </div>
 
-        {/* Grid Misi */}
-        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+        {/* Swipe / Scroll Container */}
+        <div className="flex overflow-x-auto snap-x snap-mandatory gap-6 pb-6 pt-2 px-2 scrollbar-thin scrollbar-thumb-emerald-300 scrollbar-track-emerald-100">
           {misiList.map((misi, index) => (
             <div
               key={index}
-              className="group rounded-[28px] border border-emerald-100 bg-white p-8 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:border-emerald-300 flex flex-col justify-between"
+              className="min-w-[280px] sm:min-w-[320px] max-w-[350px] flex-shrink-0 snap-center group rounded-[28px] border border-emerald-100 bg-white p-8 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:border-emerald-300 flex flex-col justify-between"
             >
               <div>
                 <div className="flex items-center justify-between mb-6">
@@ -90,6 +96,9 @@ export default function VisionMission() {
             </div>
           ))}
         </div>
+        <p className="text-center text-xs text-emerald-700 mt-4 tracking-wide font-medium">
+          ← Geser untuk melihat misi lainnya →
+        </p>
       </Container>
     </section>
   );

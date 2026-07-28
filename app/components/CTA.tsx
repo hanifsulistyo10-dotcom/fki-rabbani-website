@@ -1,4 +1,8 @@
+"use client";
+
 import { ArrowRight, Mail, Users } from "lucide-react";
+import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function CTA() {
   return (
@@ -6,7 +10,6 @@ export default function CTA() {
 
       {/* Background Glow */}
       <div className="absolute -top-40 -left-40 h-[420px] w-[420px] rounded-full bg-emerald-400/10 blur-3xl" />
-
       <div className="absolute -bottom-40 -right-40 h-[420px] w-[420px] rounded-full bg-green-300/10 blur-3xl" />
 
       {/* Pattern */}
@@ -20,66 +23,73 @@ export default function CTA() {
       />
 
       <div className="relative mx-auto max-w-5xl px-6">
-
-        <div className="overflow-hidden rounded-[36px] border border-white/10 bg-white/10 p-14 text-center shadow-2xl backdrop-blur-xl">
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="overflow-hidden rounded-[36px] border border-white/10 bg-white/10 p-14 text-center shadow-2xl backdrop-blur-xl"
+        >
 
           {/* Icon */}
-
-          <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-emerald-400 text-white shadow-xl">
-
+          <motion.div 
+            initial={{ scale: 0 }}
+            whileInView={{ scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
+            className="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-emerald-400 text-white shadow-xl"
+          >
             <Users size={38} />
-
-          </div>
+          </motion.div>
 
           {/* Heading */}
-
           <h2 className="mt-10 text-4xl font-black leading-tight text-white md:text-5xl">
-
             Siap Menjadi Bagian dari
             <br />
-
             <span className="text-emerald-300">
-
               Generasi Rabbani?
-
             </span>
-
           </h2>
 
           {/* Description */}
-
           <p className="mx-auto mt-8 max-w-3xl text-lg leading-8 text-green-100">
-
             Bergabunglah bersama FKI Rabbani Universitas Andalas
             untuk bertumbuh dalam ilmu, dakwah,
             kepemimpinan, dan pengabdian kepada umat.
-
           </p>
 
           {/* Buttons */}
-
           <div className="mt-12 flex flex-wrap justify-center gap-5">
+            
+            {/* Tombol Gabung Sekarang diarahkan ke /gabung */}
+            <Link href="/gabung">
+              <motion.button 
+                whileHover={{ scale: 1.05, y: -2 }}
+                whileTap={{ scale: 0.95 }}
+                className="inline-flex items-center gap-3 rounded-xl bg-white px-8 py-4 font-semibold text-green-900 shadow-xl transition-all duration-300 hover:shadow-2xl cursor-pointer"
+              >
+                Gabung Sekarang
+                <motion.span
+                  animate={{ x: [0, 4, 0] }}
+                  transition={{ duration: 1.5, repeat: Infinity }}
+                >
+                  <ArrowRight size={20} />
+                </motion.span>
+              </motion.button>
+            </Link>
 
-            <button className="inline-flex items-center gap-3 rounded-xl bg-white px-8 py-4 font-semibold text-green-900 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl">
-
-              Gabung Sekarang
-
-              <ArrowRight size={20} />
-
-            </button>
-
-            <button className="inline-flex items-center gap-3 rounded-xl border border-white/20 bg-white/5 px-8 py-4 font-semibold text-white transition-all duration-300 hover:bg-white/10">
-
+            <motion.button 
+              whileHover={{ scale: 1.05, y: -2, backgroundColor: "rgba(255, 255, 255, 0.15)" }}
+              whileTap={{ scale: 0.95 }}
+              className="inline-flex items-center gap-3 rounded-xl border border-white/20 bg-white/5 px-8 py-4 font-semibold text-white backdrop-blur-md transition-all duration-300 cursor-pointer"
+            >
               <Mail size={20} />
-
               Hubungi Kami
-
-            </button>
+            </motion.button>
 
           </div>
 
-        </div>
-
+        </motion.div>
       </div>
 
     </section>

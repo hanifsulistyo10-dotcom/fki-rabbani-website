@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { ArrowRight, CalendarDays } from "lucide-react";
 
 import Container from "./ui/Container";
@@ -6,7 +7,6 @@ import SectionTitle from "./ui/SectionTitle";
 
 // Tentukan 1 path foto dummy yang sama di folder public
 const DUMMY_IMAGE_PATH = "/images/dummy-kegiatan.jpg"; 
-// Pastikan file foto tersimpan di: public/images/dummy-kegiatan.jpg
 
 const news = [
   {
@@ -47,7 +47,7 @@ export default function News() {
           badge="Berita Terbaru"
           title="Kabar"
           highlight="Rabbani"
-          description="Berbagai informasi, kegiatan, dan artikel terbaru dari Forum Kajian Islam Rabbani Universitas Andalas."
+          description="Berbagai informasi, kegiatan, dan artikel terbaru dari Forum&nbsp;Kajian&nbsp;Islam&nbsp;Rabbani&nbsp;Universitas&nbsp;Andalas."
         />
 
         <div className="mt-16 lg:mt-20 grid gap-8 lg:grid-cols-3">
@@ -127,8 +127,10 @@ export default function News() {
 
         {/* BUTTON */}
         <div className="mt-16 text-center">
-          <button
+          <Link
+            href="/kabar"
             className="
+              inline-block
               rounded-xl
               bg-[#032b22]
               px-8
@@ -142,7 +144,7 @@ export default function News() {
             "
           >
             Lihat Semua Artikel
-          </button>
+          </Link>
         </div>
 
       </Container>

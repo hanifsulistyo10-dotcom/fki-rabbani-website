@@ -47,7 +47,7 @@ export default function Navbar() {
               FKI RABBANI
             </span>
             <p className="hidden text-[10px] font-medium uppercase tracking-wider text-emerald-300 sm:block">
-              UKM Kebatinan &amp; Kerohanian Islam UNAND
+              Lebih Akrab Dan Bersahabat
             </p>
           </div>
         </Link>
@@ -75,13 +75,13 @@ export default function Navbar() {
           </Link>
 
           <Link
-            href="/program-kerja"
-            aria-current={pathname === "/program-kerja" ? "page" : undefined}
+            href="/gallery"
+            aria-current={pathname === "/gallery" ? "page" : undefined}
             className={`relative text-sm font-medium transition after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-0 after:bg-emerald-400 after:transition-all hover:text-emerald-300 hover:after:w-full ${
-              pathname === "/program-kerja" ? "text-emerald-300 after:w-full" : "text-white/90"
+              pathname === "/gallery" ? "text-emerald-300 after:w-full" : "text-white/90"
             }`}
           >
-            Program Kerja
+            Galeri
           </Link>
 
           <Link
@@ -105,7 +105,7 @@ export default function Navbar() {
           </Link>
         </div>
 
-        {/* Mobile Button (Accessibility Fixed) */}
+        {/* Mobile Button */}
         <button
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           className="rounded-xl p-2 text-white transition hover:bg-white/10 md:hidden"
@@ -171,7 +171,7 @@ export default function Navbar() {
                 {[
                   ["Beranda", "/"],
                   ["Tentang Kami", "/tentang"],
-                  ["Program Kerja", "/program-kerja"],
+                  ["Galeri", "/gallery"],
                   ["Kabar Rabbani", "/kabar"],
                   ["Kontak", "#kontak"],
                 ].map(([title, href]) => (

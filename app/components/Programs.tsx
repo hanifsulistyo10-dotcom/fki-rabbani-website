@@ -9,8 +9,13 @@ import {
   Globe,
   ArrowRight,
   Sparkles,
+  MoonStar,
+  ShieldCheck,
+  Flower2,
+  Landmark,
 } from "lucide-react";
 
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { stagger, card } from "@/app/lib/motion";
 
@@ -19,62 +24,62 @@ import SectionTitle from "./ui/SectionTitle";
 
 const programs = [
   {
-    icon: BookOpen,
-    category: "Pendidikan",
-    title: "Kajian & Pendidikan",
+    icon: MoonStar,
+    category: "Syiar Kampus",
+    title: "RDK (Ramadhan di Kampus) UNAND",
     description:
-      "Template kegiatan kajian Islam, seminar, pelatihan, dan pengembangan wawasan keislaman mahasiswa.",
-    tag: "Akademik & Syiar",
+      "Rangkaian syiar akbar Ramadhan yang digelar FKI Rabbani bersama FSI se-Unand untuk menghidupkan suasana keislaman di kampus — mulai dari kajian, buka bersama, hingga aksi sosial berbagi di lingkungan Unand.",
+    tag: "Ramadhan & Dakwah",
     gradient: "from-emerald-500/20 via-teal-500/10 to-transparent",
     glowColor: "group-hover:shadow-[0_0_30px_rgba(16,185,129,0.2)]",
   },
   {
-    icon: Users,
-    category: "Kaderisasi",
-    title: "Kaderisasi",
+    icon: GraduationCap,
+    category: "Penyambutan Mahasiswa Baru",
+    title: "Ahlan Rangers",
     description:
-      "Template pembinaan kader, mentoring, serta proses pengembangan anggota FKI Rabbani.",
-    tag: "Pengembangan Anggota",
+      "Program penyambutan mahasiswa baru yang memperkenalkan FKI Rabbani dan FSI se-Unand sejak awal semester, sekaligus wadah menemukan bakat dan jiwa kepemimpinan Islami di langkah pertama perkuliahan.",
+    tag: "Kaderisasi",
     gradient: "from-teal-500/20 via-emerald-500/10 to-transparent",
     glowColor: "group-hover:shadow-[0_0_30px_rgba(20,184,166,0.2)]",
   },
   {
-    icon: GraduationCap,
-    category: "Pembinaan",
-    title: "Pembinaan",
+    icon: ShieldCheck,
+    category: "Pelatihan Kader",
+    title: "Kobar Synergy Academy (KSA)",
     description:
-      "Template program pembentukan karakter, kepemimpinan, dan penguatan spiritual mahasiswa.",
-    tag: "Karakter & Leadership",
+      "Kamp pelatihan 3 hari 2 malam bagi Aktivis Dakwah Kampus se-Sumatera Barat — memperkuat pemahaman dakwah dan pemikiran Islam, sekaligus membangun ketahanan fisik dan mental para kader.",
+    tag: "Leadership",
     gradient: "from-emerald-600/20 via-teal-600/10 to-transparent",
     glowColor: "group-hover:shadow-[0_0_30px_rgba(5,150,105,0.2)]",
   },
   {
-    icon: HeartHandshake,
-    category: "Sosial",
-    title: "Pengabdian Sosial",
+    icon: Flower2,
+    category: "Keputrian",
+    title: "Putri Andalas Fair (PAF)",
     description:
-      "Template kegiatan sosial, bakti masyarakat, serta aksi kemanusiaan dan kepedulian umat.",
-    tag: "Aksi Umat",
+      "Ajang tahunan Keputrian FKI Rabbani yang merayakan potensi dan kreativitas muslimah Unand lewat rangkaian talkshow, kompetisi, dan bazar bernuansa islami.",
+    tag: "Pengembangan Muslimah",
     gradient: "from-teal-600/20 via-emerald-500/10 to-transparent",
     glowColor: "group-hover:shadow-[0_0_30px_rgba(13,148,136,0.2)]",
   },
   {
-    icon: Megaphone,
-    category: "Media Dakwah",
-    title: "Media & Publikasi",
+    icon: Landmark,
+    category: "Festival Dakwah",
+    title: "Andalas Islamic Fair (AIF)",
     description:
-      "Template pengelolaan media sosial, desain kreatif, dokumentasi, dan syiar digital.",
-    tag: "Syiar Kreatif",
+      "Syiar akbar tahunan FKI Rabbani bersama seluruh FSI Universitas Andalas — menghadirkan lomba orasi, bedah buku, dan bazar untuk memperluas dakwah serta mempererat ukhuwah Islamiyah se-kampus.",
+    tag: "Syiar Kampus",
     gradient: "from-emerald-500/20 via-cyan-500/10 to-transparent",
     glowColor: "group-hover:shadow-[0_0_30px_rgba(16,185,129,0.2)]",
   },
   {
-    icon: Globe,
-    category: "Kolaborasi",
-    title: "Kerja Sama",
+    icon: BookOpen,
+    category: "Pembinaan",
+    title: "Sekolah Rabbani",
     description:
-      "Template sinergi dengan FSI, lembaga dakwah kampus, maupun organisasi eksternal.",
-    tag: "Sinergi Strategis",
+      "Program pembinaan intensif bagi mahasiswa baru dan calon pengurus, memadukan pendalaman tsaqofah keislaman dengan pengembangan soft skill dan pemahaman berorganisasi.",
+    tag: "Pengembangan SDM",
     gradient: "from-teal-500/20 via-emerald-600/10 to-transparent",
     glowColor: "group-hover:shadow-[0_0_30px_rgba(20,184,166,0.2)]",
   },
@@ -94,7 +99,7 @@ export default function Programs() {
           badge="Program Kerja"
           title="Program"
           highlight="Unggulan"
-          description="Template kategori program kerja FKI Rabbani Universitas Andalas yang dapat disesuaikan setiap periode kepengurusan."
+          description="Deretan program pembinaan, syiar, dan pengembangan karakter yang&nbsp;menjadi&nbsp;pilar&nbsp;utama&nbsp;dalam&nbsp;menebar&nbsp;kebaikan&nbsp;di&nbsp;kampus"
         />
 
         <motion.div
@@ -190,38 +195,44 @@ export default function Programs() {
           })}
         </motion.div>
 
-        {/* Bottom CTA dengan Efek Kilau Premium */}
+        {/* Bottom CTA dengan Link ke Halaman Program Kerja */}
         <div className="mt-16 text-center">
-          <motion.button
+          <motion.div
             whileHover={{ scale: 1.04 }}
             whileTap={{ scale: 0.96 }}
             transition={{ duration: 0.2 }}
-            className="
-              relative
-              overflow-hidden
-              rounded-2xl
-              bg-gradient-to-r
-              from-[#032b22]
-              via-emerald-900
-              to-[#032b22]
-              px-10
-              py-4
-              font-bold
-              text-white
-              shadow-2xl
-              shadow-emerald-950/30
-              border
-              border-emerald-500/30
-              transition-all
-              duration-300
-              hover:shadow-emerald-900/50
-              hover:border-emerald-400
-            "
+            className="inline-block"
           >
-            {/* Efek Kilau Berjalan */}
-            <div className="absolute inset-0 w-1/2 h-full bg-white/10 skew-x-12 -translate-x-full animate-[shimmer_2s_infinite]" />
-            <span className="relative z-10 tracking-wide">Lihat Seluruh Program Kerja</span>
-          </motion.button>
+            <Link
+              href="/program-kerja"
+              className="
+                relative
+                inline-block
+                overflow-hidden
+                rounded-2xl
+                bg-gradient-to-r
+                from-[#032b22]
+                via-emerald-900
+                to-[#032b22]
+                px-10
+                py-4
+                font-bold
+                text-white
+                shadow-2xl
+                shadow-emerald-950/30
+                border
+                border-emerald-500/30
+                transition-all
+                duration-300
+                hover:shadow-emerald-900/50
+                hover:border-emerald-400
+              "
+            >
+              {/* Efek Kilau Berjalan */}
+              <div className="absolute inset-0 w-1/2 h-full bg-white/10 skew-x-12 -translate-x-full animate-[shimmer_2s_infinite]" />
+              <span className="relative z-10 tracking-wide">Lihat Seluruh Program Kerja</span>
+            </Link>
+          </motion.div>
         </div>
       </Container>
     </section>

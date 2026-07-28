@@ -99,10 +99,7 @@ export default function Hero() {
             }}
             className="mx-auto mt-6 max-w-3xl text-base leading-relaxed text-emerald-100 md:text-xl md:leading-9"
           >
-            Forum Kajian Islam Rabbani merupakan Unit Kegiatan Mahasiswa
-            Universitas Andalas yang berfokus pada dakwah, kaderisasi,
-            pengembangan karakter, dan pembinaan mahasiswa muslim menuju
-            generasi yang berilmu, berakhlak, serta berdampak bagi umat.
+            Forum Kajian Islam Rabbani merupakan Unit Kegiatan Mahasiswa Universitas Andalas yang menjadi wadah pelatihan, dakwah kampus, kaderisasi, dan pengembangan karakter mahasiswa muslim. Bersama FKI Rabbani, mari bertumbuh menjadi insan yang berilmu, berakhlak, dan memberi manfaat bagi kampus, masyarakat, serta umat.
           </motion.p>
 
           {/* Buttons */}
