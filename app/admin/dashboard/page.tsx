@@ -168,7 +168,7 @@ export default function AdminDashboardPage() {
         <header className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8">
           <div>
             <h1 className="text-2xl font-black text-white tracking-tight">Ringkasan Sistem</h1>
-            <p className="text-sm text-slate-400">Selamat datang kembali di panel pengelola FKI Rabbani.</p>
+            <p className="text-sm text-slate-400">Selamat datang kembali di panel pengelola website FKI Rabbani.</p>
           </div>
           <div className="flex gap-2">
             <Link href="/admin/news/create" className="bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold px-4 py-2.5 rounded-xl transition-all shadow-lg shadow-emerald-900/30 flex items-center gap-2">
