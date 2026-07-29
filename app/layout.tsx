@@ -50,27 +50,27 @@ export const metadata: Metadata = {
     title: "FKI Rabbani Universitas Andalas",
     description:
       "Website resmi Forum Kajian Islam Rabbani Universitas Andalas.",
-    url: "https://fkirabbaniunand.vercel.app",
+    url: "/",
     siteName: "FKI Rabbani",
     locale: "id_ID",
     type: "website",
 
     images: [
       {
-        url: "https://fkirabbaniunand.vercel.app/logo/fki-logo.png",
-        width: 512,
-        height: 512,
-        alt: "Logo Resmi FKI Rabbani Universitas Andalas",
+        url: "/images/og-banner.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Banner Resmi FKI Rabbani Universitas Andalas",
       },
     ],
   },
 
   twitter: {
-    card: "summary",
+    card: "summary_large_image", // Diubah ke summary_large_image agar banner melebar tampil sempurna
     title: "FKI Rabbani Universitas Andalas",
     description:
       "Website resmi Forum Kajian Islam Rabbani Universitas Andalas.",
-    images: ["https://fkirabbaniunand.vercel.app/logo/fki-logo.png"],
+    images: ["/images/og-banner.jpg"],
   },
 
   icons: {
