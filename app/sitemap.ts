@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://fkirabbaniunand.vercel.app";
+  const baseUrl = "https://fkirabbani.vercel.app";
 
   return [
     {
@@ -10,33 +10,29 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
       priority: 1,
     },
-
     {
       url: `${baseUrl}/tentang`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.9,
     },
-
-    {
-      url: `${baseUrl}/program`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.9,
-    },
-
     {
       url: `${baseUrl}/kabar`,
       lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 0.8,
+      changeFrequency: "daily",
+      priority: 0.9,
     },
-
     {
-      url: `${baseUrl}/agenda`,
+      url: `${baseUrl}/gallery`,
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/feedback`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.7,
     },
   ];
 }
