@@ -57,10 +57,10 @@ export const metadata: Metadata = {
 
     images: [
       {
-        url: "/logo/fki-logo.png",
-        width: 512,
-        height: 512,
-        alt: "Logo Resmi FKI Rabbani Universitas Andalas", // 👈 16.6 Accessibility Alt Image
+        url: "https://fkirabbaniunand.vercel.app/logo/fki-logo.png", // Ubah dengan domain lengkap Anda
+        // width: 512,
+        // height: 512,
+        // alt: "Logo Resmi FKI Rabbani Universitas Andalas",
       },
     ],
   },
