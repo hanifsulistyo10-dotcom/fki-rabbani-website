@@ -114,6 +114,10 @@ export const metadata: Metadata = {
       "max-video-preview": -1,
     },
   },
+
+  verification: {
+    google: "I7q8zwDv_Wh2pGK0p91qz2GA9oxFJN11aRV79f69xLw",
+  },
 };
 
 // ========================================

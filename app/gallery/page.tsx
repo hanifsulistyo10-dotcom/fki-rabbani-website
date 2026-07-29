@@ -7,6 +7,14 @@ import Footer from '../components/layout/Footer';
 import { Calendar, FolderOpen, Loader2, ArrowRight, Sparkles } from 'lucide-react';
 import Link from 'next/link';
 
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Galeri Kegiatan",
+  description:
+    "Dokumentasi foto kegiatan, kajian, kaderisasi, pengabdian, dan aktivitas FKI Rabbani Universitas Andalas.",
+};
+
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!;
 const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!;
 const supabase = createClient(supabaseUrl, supabaseAnonKey);
