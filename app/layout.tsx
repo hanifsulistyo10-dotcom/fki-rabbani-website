@@ -9,7 +9,7 @@ export const viewport: Viewport = {
 
 // Konfigurasi Metadata Utama & Security Policy
 export const metadata: Metadata = {
-  metadataBase: new URL("https://fkirabbaniunand.vercel.app"),
+  metadataBase: new URL("https://fkirabbani.vercel.app"),
 
   referrer: "origin-when-cross-origin",
 
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     title: "FKI Rabbani Universitas Andalas",
     description:
       "Website resmi Forum Kajian Islam Rabbani Universitas Andalas.",
-    url: "https://fkirabbaniunand.vercel.app",
+    url: "https://fkirabbani.vercel.app",
     siteName: "FKI Rabbani",
     locale: "id_ID",
     type: "website",
