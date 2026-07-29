@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     title: "FKI Rabbani Universitas Andalas",
     description:
       "Website resmi Forum Kajian Islam Rabbani Universitas Andalas.",
-    url: "/",
+    url: "https://fkirabbaniunand.vercel.app",
     siteName: "FKI Rabbani",
     locale: "id_ID",
     type: "website",
@@ -66,7 +66,7 @@ export const metadata: Metadata = {
   },
 
   twitter: {
-    card: "summary_large_image", // Diubah ke summary_large_image agar banner melebar tampil sempurna
+    card: "summary_large_image",
     title: "FKI Rabbani Universitas Andalas",
     description:
       "Website resmi Forum Kajian Islam Rabbani Universitas Andalas.",
