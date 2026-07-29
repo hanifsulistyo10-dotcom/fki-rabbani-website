@@ -9,9 +9,9 @@ export const viewport: Viewport = {
 
 // Konfigurasi Metadata Utama & Security Policy
 export const metadata: Metadata = {
-  metadataBase: new URL("https://fkirabbaniunand.vercel.app"), // ganti jika nanti memakai domain sendiri
+  metadataBase: new URL("https://fkirabbaniunand.vercel.app"),
 
-  referrer: "origin-when-cross-origin", // 👈 16.7 Security: Melindungi kebocoran URL internal saat mengklik link keluar
+  referrer: "origin-when-cross-origin",
 
   title: {
     default: "FKI Rabbani Universitas Andalas",
@@ -57,20 +57,20 @@ export const metadata: Metadata = {
 
     images: [
       {
-        url: "https://fkirabbaniunand.vercel.app/logo/fki-logo.png", // Ubah dengan domain lengkap Anda
-        // width: 512,
-        // height: 512,
-        // alt: "Logo Resmi FKI Rabbani Universitas Andalas",
+        url: "https://fkirabbaniunand.vercel.app/logo/fki-logo.png",
+        width: 512,
+        height: 512,
+        alt: "Logo Resmi FKI Rabbani Universitas Andalas",
       },
     ],
   },
 
   twitter: {
-    card: "summary", // Diubah ke summary agar sesuai untuk logo kotak/square
+    card: "summary",
     title: "FKI Rabbani Universitas Andalas",
     description:
       "Website resmi Forum Kajian Islam Rabbani Universitas Andalas.",
-    images: ["/logo/fki-logo.png"],
+    images: ["https://fkirabbaniunand.vercel.app/logo/fki-logo.png"],
   },
 
   icons: {
