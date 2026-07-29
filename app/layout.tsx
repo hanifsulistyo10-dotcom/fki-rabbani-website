@@ -1,17 +1,19 @@
-import { Analytics } from "@vercel/analytics/next"
+import { Analytics } from "@vercel/analytics/next";
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
-// Konfigurasi Viewport (Theme Color & Tampilan Mobile)
+// ========================================
+// Viewport Configuration
+// ========================================
 export const viewport: Viewport = {
   themeColor: "#065f46",
 };
 
-// Konfigurasi Metadata Utama & Security Policy
+// ========================================
+// Website Metadata (SEO)
+// ========================================
 export const metadata: Metadata = {
   metadataBase: new URL("https://fkirabbani.vercel.app"),
-
-  referrer: "origin-when-cross-origin",
 
   title: {
     default: "FKI Rabbani Universitas Andalas",
@@ -19,18 +21,9 @@ export const metadata: Metadata = {
   },
 
   description:
-    "Website resmi Forum Kajian Islam Rabbani Universitas Andalas. Menyajikan informasi mengenai profil organisasi, program kerja, berita, agenda, serta kegiatan dakwah dan kaderisasi mahasiswa muslim.",
+    "Website resmi Forum Kajian Islam Rabbani Universitas Andalas. Menyajikan informasi mengenai profil organisasi, berita, galeri kegiatan, dakwah kampus, kaderisasi, serta berbagai aktivitas mahasiswa muslim Universitas Andalas.",
 
-  keywords: [
-    "FKI Rabbani",
-    "Forum Kajian Islam Rabbani",
-    "Universitas Andalas",
-    "UKM Unand",
-    "Organisasi Islam Kampus",
-    "Dakwah Kampus",
-    "Mahasiswa Muslim",
-    "FSI Universitas Andalas",
-  ],
+  applicationName: "FKI Rabbani Website",
 
   authors: [
     {
@@ -42,17 +35,42 @@ export const metadata: Metadata = {
 
   publisher: "Forum Kajian Islam Rabbani Universitas Andalas",
 
-  applicationName: "FKI Rabbani Website",
-
   category: "Education",
+
+  referrer: "origin-when-cross-origin",
+
+  keywords: [
+    "FKI Rabbani",
+    "Forum Kajian Islam Rabbani",
+    "Universitas Andalas",
+    "Unand",
+    "UKM Universitas Andalas",
+    "UKM Unand",
+    "Dakwah Kampus",
+    "Lembaga Dakwah Kampus",
+    "LDK",
+    "Mahasiswa Muslim",
+    "Kajian Islam",
+    "FSI Universitas Andalas",
+    "Organisasi Mahasiswa Islam",
+  ],
+
+  alternates: {
+    canonical: "https://fkirabbani.vercel.app",
+  },
 
   openGraph: {
     title: "FKI Rabbani Universitas Andalas",
+
     description:
       "Website resmi Forum Kajian Islam Rabbani Universitas Andalas.",
+
     url: "https://fkirabbani.vercel.app",
+
     siteName: "FKI Rabbani",
+
     locale: "id_ID",
+
     type: "website",
 
     images: [
@@ -60,16 +78,19 @@ export const metadata: Metadata = {
         url: "/images/og-banner.jpg",
         width: 1200,
         height: 630,
-        alt: "Banner Resmi FKI Rabbani Universitas Andalas",
+        alt: "FKI Rabbani Universitas Andalas",
       },
     ],
   },
 
   twitter: {
     card: "summary_large_image",
+
     title: "FKI Rabbani Universitas Andalas",
+
     description:
       "Website resmi Forum Kajian Islam Rabbani Universitas Andalas.",
+
     images: ["/images/og-banner.jpg"],
   },
 
@@ -79,12 +100,25 @@ export const metadata: Metadata = {
     apple: "/apple-icon.png",
   },
 
+  manifest: "/site.webmanifest",
+
   robots: {
     index: true,
     follow: true,
+
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
   },
 };
 
+// ========================================
+// Root Layout
+// ========================================
 export default function RootLayout({
   children,
 }: Readonly<{
